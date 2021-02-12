@@ -29,11 +29,45 @@ To get the list of all options use:
 ``` bash
 python phpvuln.py -h
 ```
+# Docker usage mode
+
+# requeriments
+
+[X] docker
+
+## how to run docker container ... ?
+```bash
+docker build -t phpvuln .
+```
+## Run the container
+
+```
+docker run -dt --name phpvuln -v $PWD:/home/vuln <container_id>
+```
+## Exec the phpvuln.py
+Get the help
+```
+docker exec -ti phpvuln python phpvuln.py -h
+```
+Set the path
+```
+docker exec -ti phpvuln python phpvuln.py -p /home/vuln/your/path
+```
+## Example
+
+![Screenshot](images/execdockervuln.png)
+
+## Stop te container
+```bash
+docker stop phpvuln
+```
 
 ## Contributors
 
 checksum
 
 * [Twitter](https://twitter.com/0xFADE)
+* [Twitter](https://twitter.com/equinockx)
 
 _I'm currently looking for contributors to help improve phpvuln. Contact me on Discord, if you're interested :-)_
+
